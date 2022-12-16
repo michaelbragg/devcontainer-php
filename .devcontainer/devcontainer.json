@@ -70,7 +70,8 @@
               "valeryanm.vscode-phpsab",
               "rexshi.phpdoc-comment-vscode-plugin",
               "emallin.phpunit",
-              "onecentlin.phpunit-snippets"
+              "onecentlin.phpunit-snippets",
+              "IvanGrigorov.php-getters-and-setters"
           ]
       }
   },
