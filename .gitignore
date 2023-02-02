@@ -1,0 +1,30 @@
+
+# System
+
+error_log
+.DS_Store
+
+# Development
+/.docker/*
+/.make/*
+/.github/*
+/makefile
+
+## Composer
+auth.json
+composer.json
+composer.lock
+/vendor
+/tools/*/vendor
+
+## NodeJS
+/node_modules/*
+/package-lock.json
+
+# Server
+.env
+*.env
+*.log
+
+# Application
+/public
