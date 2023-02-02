@@ -31,7 +31,7 @@ rm -rf ./{project-name}/{readme,license}.md
 
 ## License
 
-MIT License: Copyright (c) 2022 Michael Bragg
+MIT License: Copyright (c) 2022-2023 Michael Bragg
 
 ## Contact
 
