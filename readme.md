@@ -13,7 +13,7 @@ The devContainer has Docker, PHP and Node installed for serving your project and
 
 ## Features
 
-- [Docker in Docker]()
+- [Docker in Docker](https://github.com/devcontainers/features/tree/main/src/docker-in-docker)
 - [Git](https://github.com/devcontainers/features/tree/main/src/git)
 - [GitHub CLI](https://github.com/devcontainers/features/tree/main/src/github-cli)
 - [NodeJS](https://github.com/devcontainers/features/tree/main/src/node)
@@ -21,13 +21,11 @@ The devContainer has Docker, PHP and Node installed for serving your project and
 
 ## Getting started
 
-Download this release or clone via:
-
-```bash
-git clone --depth=1 --branch=master https://github.com/michaelbragg/development-devcontainer.git {project-name}
-rm -rf ./{project-name}/.git
-rm -rf ./{project-name}/{readme,license}.md
-```
+1. Add this to an exsisting project by downloading this repositories release and extracting to your workspace's root.
+2. Open your workspace in VS Code.
+3. Change the Development Container name property in `./.devcontainer.json`.
+4. Open the Command Palette
+5. Select 'Dev Containers: Reopen in Container
 
 ## License
 
