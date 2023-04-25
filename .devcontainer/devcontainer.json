@@ -38,7 +38,6 @@
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
 				// General Extensions.
-				"streetsidesoftware.code-spell-checker",
 				"patbenatar.advanced-new-file",
 				"chouzz.vscode-better-align",
 				"adpyke.codesnap",
@@ -77,25 +76,29 @@
 			],
 			// Set *default* container specific settings.json values on container create.
 			"settings": {
+				"files.exclude": {
+					".composer": true,
+					".npm": true,
+					".wp-cli": true
+				},
 				"files.watcherExclude": {
+					"**/.composer": true,
 					"**/.git"        : true,
+					"**/.npm": true,
+					"**/.wp-cli": true,
 					"**/vendor"      : true,
 					"**/node_modules": true
 				},
-				"php.validate.executablePath": "/usr/local/bin/php",
 				"git.ignoreLimitWarning": true,
-				"cSpell.language": "en-GB",
-				"cSpell.words": [
-					"autoload",
-					"Hydratable",
-					"phpcs"
-				]
+				"intelephense.environment.phpVersion": "8.1",
+				"php.suggest.basic": false,
+				"php.validate.executablePath": "/usr/local/bin/php"
 			}
 		}
 	},
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	"forwardPorts"    : [],
-	"postStartCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}",
+	"postStartCommand": "sudo chmod +x .devcontainer/postStartCommand.sh && .devcontainer/postStartCommand.sh",
 	// Set `remoteUser` to `root` to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
 	"remoteUser": "vscode"
 }
