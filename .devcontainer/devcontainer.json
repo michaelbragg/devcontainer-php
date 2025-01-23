@@ -1,7 +1,6 @@
 {
 	"name" : "michaelbragg/devcontainer-php",
 "$schema": "http://json-schema.org/draft-07/schema#",
-    "name" : "michaelbragg/website",
     "image": "mcr.microsoft.com/devcontainers/base:bullseye",
 	"mounts": [
 		"source=${localEnv:HOME}/.composer,target=/home/vscode/.composer,type=bind,consistency=cached",
@@ -19,8 +18,12 @@
 		"ghcr.io/devcontainers/features/docker-in-docker:1": {
 			"dockerDashComposeVersion": "v2"
 		},
+        "ghcr.io/devcontainers/features/php:1.1.2": {
+            "version": "8.3",
+            "installComposer": true
+        },
 		"ghcr.io/devcontainers/features/node:1": {
-			"version": "18"
+			"version": "22"
 		},
 		"ghcr.io/devcontainers/features/git:1": {
 			"version": "latest",
