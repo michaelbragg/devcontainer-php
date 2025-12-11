@@ -1,104 +1,104 @@
 {
-	// Based on https://github.com/devcontainers/images/blob/main/src/php/.devcontainer/devcontainer.json
-	// Copyright (c) Microsoft Corporation. All rights reserved.
-	// Licensed under the MIT License
-	"name" : "michaelbragg/devcontainer-php",
-	"build": {
-		"dockerfile": "./Dockerfile",
-		"context"   : "."
-	},
-	"mounts": [
-		"source=${localEnv:HOME}/.composer,target=/home/vscode/.composer,type=bind,consistency=cached",
-		"source=${localEnv:HOME}/.npm,target=/home/vscode/.npm,type=bind,consistency=cached"
-  ],
-	"features": {
-		"ghcr.io/devcontainers/features/common-utils:1": {
-			"installZsh"     : "true",
-			"username"       : "vscode",
-			"uid"            : "1000",
-			"gid"            : "1000",
-			"upgradePackages": "true"
-		},
-		"ghcr.io/devcontainers/features/github-cli:1"      : {},
-		"ghcr.io/devcontainers/features/docker-in-docker:1": {
-			"dockerDashComposeVersion": "v2"
-		},
-		"ghcr.io/devcontainers/features/node:1": {
-			"version": "18"
-		},
-		"ghcr.io/devcontainers/features/git:1": {
-			"version": "latest",
-			"ppa"    : "false"
-		}
-	},
-	// Configure tool-specific properties.
-	"customizations": {
-		// Configure properties specific to VS Code.
-		"vscode": {
-			// Add the IDs of extensions you want installed when the container is created.
-			"extensions": [
-				// General Extensions.
-				"patbenatar.advanced-new-file",
-				"chouzz.vscode-better-align",
-				"adpyke.codesnap",
-				"ms-azuretools.vscode-docker",
-				"mikestead.dotenv",
-				"mrmlnc.vscode-duplicate",
-				"EditorConfig.EditorConfig",
-				"mrorz.language-gettext",
-				"eamodio.gitlens",
-				"ms-vscode.makefile-tools",
-				"DavidAnson.vscode-markdownlint",
-				"PKief.material-icon-theme",
-				"christian-kohler.path-intellisense",
-				"mechatroner.rainbow-csv",
-				"ms-vscode-remote.vscode-remote-extensionpack",
-				"ms-vscode.remote-explorer",
-				"EthanSK.restore-terminals",
-				"wayou.vscode-todo-highlight",
-				"xshrim.txt-syntax",
-				"DotJoshJohnson.xml",
-				"redhat.vscode-yaml",
-				// PHP Extensions.
-				"calebporzio.better-phpunit",
-				"damianbal.vs-phpclassgen",
-				"xdebug.php-debug",
-				"neilbrayfield.php-docblocker",
-				"sevavietl.php-files",
-				"bmewburn.vscode-intelephense-client",
-				"MehediDracula.php-namespace-resolver",
-				"marsl.vscode-php-refactoring",
-				"valeryanm.vscode-phpsab",
-				"rexshi.phpdoc-comment-vscode-plugin",
-				"emallin.phpunit",
-				"onecentlin.phpunit-snippets",
-				"IvanGrigorov.php-getters-and-setters"
-			],
-			// Set *default* container specific settings.json values on container create.
-			"settings": {
-				"files.exclude": {
-					".composer": true,
-					".npm": true,
-					".wp-cli": true
-				},
-				"files.watcherExclude": {
-					"**/.composer": true,
-					"**/.git"        : true,
-					"**/.npm": true,
-					"**/.wp-cli": true,
-					"**/vendor"      : true,
-					"**/node_modules": true
-				},
-				"git.ignoreLimitWarning": true,
-				"intelephense.environment.phpVersion": "8.1",
-				"php.suggest.basic": false,
-				"php.validate.executablePath": "/usr/local/bin/php"
-			}
-		}
-	},
-	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	"forwardPorts"    : [],
-	"postStartCommand": "sudo chmod +x .devcontainer/postStartCommand.sh && .devcontainer/postStartCommand.sh",
-	// Set `remoteUser` to `root` to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
-	"remoteUser": "vscode"
+    // Based on https://github.com/devcontainers/images/blob/main/src/php/.devcontainer/devcontainer.json
+    // Copyright (c) Microsoft Corporation. All rights reserved.
+    // Licensed under the MIT License
+    "name" : "michaelbragg/devcontainer-php",
+    "build": {
+        "dockerfile": "./Dockerfile",
+        "context"   : "."
+    },
+    "mounts": [
+        "source=${localEnv:HOME}/.composer,target=/home/vscode/.composer,type=bind,consistency=cached",
+        "source=${localEnv:HOME}/.npm,target=/home/vscode/.npm,type=bind,consistency=cached"
+    ],
+    "features": {
+        "ghcr.io/devcontainers/features/common-utils:1": {
+        "installZsh"     : "true",
+        "username"       : "vscode",
+        "uid"            : "1000",
+        "gid"            : "1000",
+        "upgradePackages": "true"
+        },
+        "ghcr.io/devcontainers/features/github-cli:1"      : {},
+        "ghcr.io/devcontainers/features/docker-in-docker:1": {
+        "dockerDashComposeVersion": "v2"
+        },
+        "ghcr.io/devcontainers/features/node:1": {
+        "version": "18"
+        },
+        "ghcr.io/devcontainers/features/git:1": {
+        "version": "latest",
+        "ppa"    : "false"
+        }
+    },
+    // Configure tool-specific properties.
+    "customizations": {
+        // Configure properties specific to VS Code.
+        "vscode": {
+        // Add the IDs of extensions you want installed when the container is created.
+        "extensions": [
+            // General Extensions.
+            "patbenatar.advanced-new-file",
+            "chouzz.vscode-better-align",
+            "adpyke.codesnap",
+            "ms-azuretools.vscode-docker",
+            "mikestead.dotenv",
+            "mrmlnc.vscode-duplicate",
+            "EditorConfig.EditorConfig",
+            "mrorz.language-gettext",
+            "eamodio.gitlens",
+            "ms-vscode.makefile-tools",
+            "DavidAnson.vscode-markdownlint",
+            "PKief.material-icon-theme",
+            "christian-kohler.path-intellisense",
+            "mechatroner.rainbow-csv",
+            "ms-vscode-remote.vscode-remote-extensionpack",
+            "ms-vscode.remote-explorer",
+            "EthanSK.restore-terminals",
+            "wayou.vscode-todo-highlight",
+            "xshrim.txt-syntax",
+            "DotJoshJohnson.xml",
+            "redhat.vscode-yaml",
+            // PHP Extensions.
+            "calebporzio.better-phpunit",
+            "damianbal.vs-phpclassgen",
+            "xdebug.php-debug",
+            "neilbrayfield.php-docblocker",
+            "sevavietl.php-files",
+            "bmewburn.vscode-intelephense-client",
+            "MehediDracula.php-namespace-resolver",
+            "marsl.vscode-php-refactoring",
+            "valeryanm.vscode-phpsab",
+            "rexshi.phpdoc-comment-vscode-plugin",
+            "emallin.phpunit",
+            "onecentlin.phpunit-snippets",
+            "IvanGrigorov.php-getters-and-setters"
+        ],
+        // Set *default* container specific settings.json values on container create.
+        "settings": {
+            "files.exclude": {
+            ".composer": true,
+            ".npm": true,
+            ".wp-cli": true
+            },
+            "files.watcherExclude": {
+            "**/.composer": true,
+            "**/.git"        : true,
+            "**/.npm": true,
+            "**/.wp-cli": true,
+            "**/vendor"      : true,
+            "**/node_modules": true
+            },
+            "git.ignoreLimitWarning": true,
+            "intelephense.environment.phpVersion": "8.1",
+            "php.suggest.basic": false,
+            "php.validate.executablePath": "/usr/local/bin/php"
+        }
+        }
+    },
+    // Use 'forwardPorts' to make a list of ports inside the container available locally.
+    "forwardPorts"    : [],
+    "postStartCommand": "sudo chmod +x .devcontainer/postStartCommand.sh && .devcontainer/postStartCommand.sh",
+    // Set `remoteUser` to `root` to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+    "remoteUser": "vscode"
 }
